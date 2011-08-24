@@ -713,6 +713,8 @@ form input[type=checkbox], form input[type=radio] {
   cursor: pointer;
 }
 form input[type=text],
+form input[type=url],
+form input[type=email],
 form input[type=password],
 form textarea,
 form select,
@@ -752,6 +754,8 @@ form ::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 form input[type=text],
+form  input[type=url],
+form input[type=email],
 form input[type=password],
 form select,
 form textarea {
@@ -762,7 +766,8 @@ form textarea {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-form input[type=text]:focus, form input[type=password]:focus, form textarea:focus {
+form input[type=text]:focus, form input[type=password]:focus, form textarea:focus,
+form input[type=url]:focus, input[type=email]:focus {
   outline: none;
   border-color: rgba(82, 168, 236, 0.8);
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
@@ -780,13 +785,15 @@ form div.error {
 form div.error > label, form div.error span.help-inline, form div.error span.help-block {
   color: #9d261d;
 }
-form div.error input[type=text], form div.error input[type=password], form div.error textarea {
+form div.error input[type=text], form div.error input[type=password], 
+form div.error input[type=url], form div.error input[type=email], form div.error textarea {
   border-color: #c87872;
   -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
 }
-form div.error input[type=text]:focus, form div.error input[type=password]:focus, form div.error textarea:focus {
+form div.error input[type=text]:focus, form div.error input[type=password]:focus,
+form div.error input[type=url]:focus, form div.error input[type=email]:focus, form div.error textarea:focus {
   border-color: #b9554d;
   -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
@@ -883,7 +890,9 @@ form input[readonly]:focus, form textarea[readonly]:focus, form input.disabled {
 .inline-inputs {
   color: #808080;
 }
-.inline-inputs span, .inline-inputs input[type=text] {
+.inline-inputs span, .inline-inputs input[type=text],
+.inline-inputs input[type=url],
+.inline-inputs input[type=email] {
   display: inline-block;
 }
 .inline-inputs input.mini {
@@ -896,7 +905,11 @@ form input[readonly]:focus, form textarea[readonly]:focus, form input.disabled {
   padding: 0 2px 0 1px;
 }
 .input-prepend input[type=text],
+.input-prepend input[type=url],
+.input-prepend input[type=email],
 .input-append input[type=text],
+.input-append input[type=url],
+.input-append input[type=email],
 .input-prepend input[type=password],
 .input-append input[type=password] {
   -webkit-border-radius: 0 3px 3px 0;
@@ -931,7 +944,8 @@ form input[readonly]:focus, form textarea[readonly]:focus, form input.disabled {
   /* IE6-7 */
 
 }
-.input-append input[type=text], .input-append input[type=password] {
+.input-append input[type=text], .input-append input[type=password],
+.input-append input[type=url], .input-append input[type=email] {
   float: left;
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
